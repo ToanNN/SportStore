@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col bg-dark text-white">
       <a class="navbar-brand">SPORTS STORE</a>
+      <cart-summary></cart-summary>
     </div>
   </div>
   <div class="row">
@@ -24,13 +25,16 @@
       <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
         <h4>
           {{ product.name }}
-          <span class="badge badge-pill badge-primary float-right">
+          <span class="badge rounded-pill bg-primary float-end">
             {{ product.price | currency: "USD":"symbol":"2.2-2" }}
           </span>
         </h4>
-        <div class="card-text bg-white p-1">{{ product.description }}</div>
+        <div class="card-text bg-white p-1">{{ product.description }}
+          <button class="btn btn-success btn-sm float-end" (click)="addProductToCart(product)">Add 2 cart</button>
+        </div>
+        
       </div>
-      <div class="form-inline float-left mr-1">
+      <div class="form-inline float-start mr-1">
         <select
           class="form-control"
           [(ngModel)]="productsPerPage"
