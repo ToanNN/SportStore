@@ -8,7 +8,7 @@ const mappings = {
 };
 
 function requiresAuthentication(method, url){
-    return (mappings[method.toLowerCase()] || []).find(x=> url.startsWith(p)) != undefined;
+    return (mappings[method.toLowerCase()] || []).find(x=> url.startsWith(x)) != undefined;
 }
 
 module.exports = function(req, res, next){
