@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {
-  ActivatedRouteSnapshot,
-  Router,
+  ActivatedRouteSnapshot, 
   RouterStateSnapshot,
+  Router,
 } from '@angular/router';
 import { StoreComponent } from '../store/store.component';
 

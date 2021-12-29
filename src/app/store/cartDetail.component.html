@@ -27,9 +27,7 @@
                 class="form-control-sm"
                 style="width: 5em"
                 [value]="line.quantity"
-                (change)="
-                  cart.updateQuantity(line.product,$event.target)
-                "
+                (change)="cart.updateQuantity(line.product, $event.target)"
               />
             </td>
             <td>{{ line.product.name }}</td>
