@@ -24,7 +24,7 @@ export class RestDataSource {
     authenticate(user: string, password: string): Observable<boolean> {
         return this.http
             .post(this.baseUrl + 'login', {
-                name: user,
+                userName: user,
                 password: password,
             })
             .pipe(
