@@ -1,5 +1,4 @@
 import { Product } from './product.model';
-
 export class Cart {
   public lines: CartLine[] = [];
   public itemCount: number = 0;
@@ -14,6 +13,7 @@ export class Cart {
     }
     this.recalculate();
   }
+
   updateQuantity(product: Product, eventTarget: EventTarget | null) {
     let quantity = (eventTarget as HTMLInputElement)?.value || 0;
     let line = this.lines.find((line) => line.product.id == product.id);
@@ -22,6 +22,7 @@ export class Cart {
     }
     this.recalculate();
   }
+
   removeLine(id: number) {
     let index = this.lines.findIndex((line) => line.product.id == id);
     this.lines.splice(index, 1);
