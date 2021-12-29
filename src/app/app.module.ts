@@ -26,6 +26,7 @@ import { StoreModule } from './store/store.module';
         component: CheckoutComponent,
         canActivate: [StoreFirstGuard],
       },
+      //Dynamically load routes of the Admin module
       {
         path: 'admin',
         loadChildren: () =>
@@ -38,4 +39,4 @@ import { StoreModule } from './store/store.module';
   providers: [StoreFirstGuard],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
